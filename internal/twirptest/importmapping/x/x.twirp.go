@@ -3,7 +3,7 @@
 
 /*
 Package x is a generated twirp stub package.
-This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.5.2.
+This code was generated with github.com/guide-century/twirp/protoc-gen-twirp v5.5.2.
 
 It is generated from these files:
 	x/x.proto
@@ -19,10 +19,10 @@ import http "net/http"
 
 import jsonpb "github.com/golang/protobuf/jsonpb"
 import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import twirp "github.com/guide-century/twirp"
+import ctxsetters "github.com/guide-century/twirp/ctxsetters"
 
-import twirp_internal_twirptest_importmapping_y "github.com/twitchtv/twirp/internal/twirptest/importmapping/y"
+import twirp_internal_twirptest_importmapping_y "github.com/guide-century/twirp/internal/twirptest/importmapping/y"
 
 // Imports only used by utility functions:
 import io "io"
@@ -143,7 +143,7 @@ func (s *svc1Server) writeError(ctx context.Context, resp http.ResponseWriter, e
 // Svc1PathPrefix is used for all URL paths on a twirp Svc1 server.
 // Requests are always: POST Svc1PathPrefix/method
 // It can be used in an HTTP mux to route twirp requests along with non-twirp requests on other routes.
-const Svc1PathPrefix = "/twirp/twirp.internal.twirptest.importmapping.x.Svc1/"
+const Svc1PathPrefix = "/twirp.internal.twirptest.importmapping.x.Svc1/"
 
 func (s *svc1Server) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	ctx := req.Context()
@@ -166,7 +166,7 @@ func (s *svc1Server) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	}
 
 	switch req.URL.Path {
-	case "/twirp/twirp.internal.twirptest.importmapping.x.Svc1/Send":
+	case "/twirp.internal.twirptest.importmapping.x.Svc1/Send":
 		s.serveSend(ctx, resp, req)
 		return
 	default:

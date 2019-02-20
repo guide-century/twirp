@@ -20,9 +20,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/twitchtv/twirp"
-	"github.com/twitchtv/twirp/example"
-	"github.com/twitchtv/twirp/hooks/statsd"
+	"github.com/guide-century/twirp"
+	"github.com/guide-century/twirp/example"
+	"github.com/guide-century/twirp/hooks/statsd"
 )
 
 type randomHaberdasher struct{}

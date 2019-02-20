@@ -3,7 +3,7 @@
 
 /*
 Package snake_case_names is a generated twirp stub package.
-This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.5.2.
+This code was generated with github.com/guide-century/twirp/protoc-gen-twirp v5.5.2.
 
 Test that protoc-gen-twirp follows the same behavior as protoc-gen-go
 for converting RPCs and message names from snake case to camel case.
@@ -23,8 +23,8 @@ import http "net/http"
 
 import jsonpb "github.com/golang/protobuf/jsonpb"
 import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import twirp "github.com/guide-century/twirp"
+import ctxsetters "github.com/guide-century/twirp/ctxsetters"
 
 // Imports only used by utility functions:
 import io "io"
@@ -146,7 +146,7 @@ func (s *haberdasherServer) writeError(ctx context.Context, resp http.ResponseWr
 // HaberdasherPathPrefix is used for all URL paths on a twirp Haberdasher server.
 // Requests are always: POST HaberdasherPathPrefix/method
 // It can be used in an HTTP mux to route twirp requests along with non-twirp requests on other routes.
-const HaberdasherPathPrefix = "/twirp/twirp.internal.twirptest.snake_case_names.Haberdasher/"
+const HaberdasherPathPrefix = "/twirp.internal.twirptest.snake_case_names.Haberdasher/"
 
 func (s *haberdasherServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	ctx := req.Context()
@@ -169,7 +169,7 @@ func (s *haberdasherServer) ServeHTTP(resp http.ResponseWriter, req *http.Reques
 	}
 
 	switch req.URL.Path {
-	case "/twirp/twirp.internal.twirptest.snake_case_names.Haberdasher/MakeHatV1":
+	case "/twirp.internal.twirptest.snake_case_names.Haberdasher/MakeHatV1":
 		s.serveMakeHatV1(ctx, resp, req)
 		return
 	default:

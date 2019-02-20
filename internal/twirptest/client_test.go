@@ -25,7 +25,7 @@ import (
 	"testing"
 
 	"github.com/pkg/errors"
-	"github.com/twitchtv/twirp"
+	"github.com/guide-century/twirp"
 )
 
 // reqInspector is a tool to check inspect HTTP Requests as they pass

@@ -3,7 +3,7 @@
 
 /*
 Package service_method_same_name is a generated twirp stub package.
-This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.5.2.
+This code was generated with github.com/guide-century/twirp/protoc-gen-twirp v5.5.2.
 
 It is generated from these files:
 	service_method_same_name.proto
@@ -19,8 +19,8 @@ import http "net/http"
 
 import jsonpb "github.com/golang/protobuf/jsonpb"
 import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import twirp "github.com/guide-century/twirp"
+import ctxsetters "github.com/guide-century/twirp/ctxsetters"
 
 // Imports only used by utility functions:
 import io "io"
@@ -141,7 +141,7 @@ func (s *echoServer) writeError(ctx context.Context, resp http.ResponseWriter, e
 // EchoPathPrefix is used for all URL paths on a twirp Echo server.
 // Requests are always: POST EchoPathPrefix/method
 // It can be used in an HTTP mux to route twirp requests along with non-twirp requests on other routes.
-const EchoPathPrefix = "/twirp/Echo/"
+const EchoPathPrefix = "/Echo/"
 
 func (s *echoServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	ctx := req.Context()
@@ -164,7 +164,7 @@ func (s *echoServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	}
 
 	switch req.URL.Path {
-	case "/twirp/Echo/Echo":
+	case "/Echo/Echo":
 		s.serveEcho(ctx, resp, req)
 		return
 	default:

@@ -3,7 +3,7 @@
 
 /*
 Package google_protobuf_imports is a generated twirp stub package.
-This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.5.2.
+This code was generated with github.com/guide-century/twirp/protoc-gen-twirp v5.5.2.
 
 It is generated from these files:
 	service.proto
@@ -19,8 +19,8 @@ import http "net/http"
 
 import jsonpb "github.com/golang/protobuf/jsonpb"
 import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import twirp "github.com/guide-century/twirp"
+import ctxsetters "github.com/guide-century/twirp/ctxsetters"
 
 import google_protobuf1 "github.com/golang/protobuf/ptypes/wrappers"
 import google_protobuf "github.com/golang/protobuf/ptypes/empty"
@@ -144,7 +144,7 @@ func (s *svcServer) writeError(ctx context.Context, resp http.ResponseWriter, er
 // SvcPathPrefix is used for all URL paths on a twirp Svc server.
 // Requests are always: POST SvcPathPrefix/method
 // It can be used in an HTTP mux to route twirp requests along with non-twirp requests on other routes.
-const SvcPathPrefix = "/twirp/twirp.internal.twirptest.use_empty.Svc/"
+const SvcPathPrefix = "/twirp.internal.twirptest.use_empty.Svc/"
 
 func (s *svcServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	ctx := req.Context()
@@ -167,7 +167,7 @@ func (s *svcServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	}
 
 	switch req.URL.Path {
-	case "/twirp/twirp.internal.twirptest.use_empty.Svc/Send":
+	case "/twirp.internal.twirptest.use_empty.Svc/Send":
 		s.serveSend(ctx, resp, req)
 		return
 	default:
